@@ -19,7 +19,7 @@ This repository contains the frontend codebase for Save and Smile app
 `React `
 
 [Trello](https://trello.com/b/K10bdZfI/save-and-smile) 
-
+## Wireframe
 ## Hierarchy Diagram
 
 ![2F7E89EB-44F2-44A3-A922-840932628447](https://github.com/ZainabHussain20/Save-and-Smile-/assets/121151845/fd9ad86d-be14-4bf9-b67c-a4cee872b645)
