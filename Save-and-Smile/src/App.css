@@ -1,8 +1,11 @@
 #root {
-  max-width: 1280px;
+  max-width: 1280px; 
   margin: 0 auto;
-  padding: 2rem;
   text-align: center;
+}
+
+body {
+  background-color: rgba(0, 0, 0, 0.945);
 }
 
 .logo {
@@ -11,9 +14,11 @@
   will-change: filter;
   transition: filter 300ms;
 }
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
+
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
@@ -39,4 +44,65 @@
 
 .read-the-docs {
   color: #888;
+}
+
+Nav {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.63);
+  height: 3em;
+  font-weight: bold;
+  font-size: 3vh;
+}
+
+header{
+  display: flex;
+  background-color: black;
+}
+
+nav a {
+  margin: 0 1em;
+  color: white
+}
+
+.welcome-signin{
+   display: flex;
+   height: 50vh;
+   width: 100%;
+   background-image: url('');
+   position: relative;
+  }
+
+
+.space {
+  display: flex;
+  background-color: aqua;
+  height: 6vh;
+  margin-left: 0.25vh;
+}
+
+.button {
+  margin-top: -18vh;
+  display: flex;
+  position: relative;
+  margin-left: 70vh;
+  border: solid rgba(128, 0, 128, 0.842) 4.5px;
+  border-radius: 3px;
+  width: fit-content;
+}
+
+.buttonCss{
+  color: white;
+  font-weight: bold;
+
+}
+
+.style {
+  margin-top: 12vh;
+  height: 33vh;
+  display: flex;
+  background-color: black;
+  width: 100%;
+  position: relative;
 }
