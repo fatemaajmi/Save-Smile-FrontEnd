@@ -1,7 +1,9 @@
-import Nav from './components/Nav'
 import { Routes, Route } from 'react-router-dom'
+import Nav from './components/Nav'
 import Home from './pages/Home'
 import About from './pages/About'
+import Category from './pages/Category'
+import Business from './pages/Business'
 import './App.css'
 
 const App = () => {
@@ -14,8 +16,10 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-        {/* <Route path="/games/details/:gameId" element={<GameDetails />} />
-        <Route path="/view/games/:genreId" element={<ViewGames />} />  */}
+        <Route path="/categories" element={<Category />} />
+        <Route path="/restaurants" element={<Business category="restaurants" />} />
+        <Route path="/cinema" element={<Business category="cinema" />} />
+        <Route path="/shops" element={<Business category="shops" />} />
       </Routes>
     </main>
   </div>
