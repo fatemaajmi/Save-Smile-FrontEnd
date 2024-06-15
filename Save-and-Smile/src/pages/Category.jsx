@@ -25,6 +25,8 @@ const Category = () => {
           </section>
 
         </div>
+
+        
     )
   }
   
