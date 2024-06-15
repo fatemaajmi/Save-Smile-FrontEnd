@@ -7,7 +7,7 @@ const Category = () => {
   const navigate = useNavigate();
 
   const handleSubmit = async (category) => {
-     let response = await axios.get(`/businesses?category=${category}`)
+     let response = await axios.get(`http://localhost:3000/businesses?category=${category}`)
      setBusinesses(response.data)
      navigate(`${category}`)
   }
@@ -21,7 +21,7 @@ const Category = () => {
           <section className="cateButton">
           <button onClick={() => handleSubmit("restaurants")}>Restaurants</button>
           <button onClick={() => handleSubmit("cinema")}>Cinema</button>
-          <button onClick={() => handleSubmit("shopping-malls")}>Shopping Malls</button>
+          <button onClick={() => handleSubmit("shops")}>Shopping Malls</button>
           </section>
 
         </div>
