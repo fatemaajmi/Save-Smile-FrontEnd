@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom"
+
 const Home = () => {
 
   return (
@@ -8,7 +10,9 @@ const Home = () => {
        </section> 
        
         <section className="button">
-           <button>Click Here To Get Started</button>
+        <Link to={`/categories`}>
+        <button>Click Here To Get Started</button>
+        </Link>
          </section>
 
          <section className="style">
