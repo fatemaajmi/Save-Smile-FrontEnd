@@ -13,7 +13,8 @@ const Business = () => {
 
    const getBusinesses = async () => {
     try {
-        const response = await axios.get(`http://localhost:3001/businesses?category=${category}`)
+        const response = await axios.get(`http://localhost:3000/businesses?category=${category}`)
+        console.log(response.data);
         setBusinesses(response.data)
       } catch (error) {
         console.error("Error fetching data:", error);
@@ -26,15 +27,14 @@ const Business = () => {
         <h2>Restaurants List</h2>
        
         <section className="container-grid">
-        
-        
+    
         {businesses.map((business) => (
           <div key={business._id} className="business-card">
-            <h3>{business.name}</h3>
+            <Category ><h3>{business.name}</h3>
             <p><strong>Location:</strong> {business.location}</p>
             <p><strong>Type:</strong> {business.type}</p>
             {business.img && <img src={business.img} alt={business.name} />}
-          </div>
+        </Category>  </div>
         ))}
 
         </section>
