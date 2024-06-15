@@ -28,8 +28,8 @@ const Business = () => {
        
         <section className="container-grid">
         {businesses.map((business) => (
-        <Link key={business.id} to={`/view/games/${restaurant.id}`}>
-        <Category   key={business.id}
+          <Link key={business.id} to={`/${category}/${business.id}`}>
+          <Category   key={business.id}
                     name={business.name}
                     image={business.image}
       /></Link>
