@@ -14,7 +14,7 @@ const Business = () => {
 
    const getBusinesses = async () => {
     try {
-        const response = await axios.get(`/businesses?category=${category}`)
+        const response = await axios.get(`http://localhost:3001/businesses?category=${category}`)
         setBusinesses(response.data)
       } catch (error) {
         console.error("Error fetching data:", error);
@@ -24,12 +24,12 @@ const Business = () => {
 
     return( 
     <div className="Restaurants">
-        <h2>{category.toUpperCase()}</h2>
+        <h2>Restaurants List</h2>
        
         <section className="container-grid">
         {businesses.map((business) => (
-          <Link key={business.id} to={`/${category}/${business.id}`}>
-          <Category   key={business.id}
+          <Link key={business.id} to={`/${category}`}>
+          <Category key={business.id}
                     name={business.name}
                     image={business.image}
       /></Link>
