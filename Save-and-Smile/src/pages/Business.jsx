@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const Business = () => {
     const [businesses, setBusinesses] = useState([])
@@ -30,7 +31,7 @@ const Business = () => {
             <img src={business.img} alt={business.name} />
             <h3>Name: {business.name}</h3>
             <p>Location: {business.location}</p>
-            <button>Coupons Available</button>
+            <Link to={`/categories/${category}/${business._id}/coupons`} ><button>Coupons Available</button></Link>
 
        </div>
         ))}
