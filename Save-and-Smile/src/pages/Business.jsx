@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import Category from './Category';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
 
@@ -26,14 +25,13 @@ const Business = () => {
         <h2>{category} List</h2>
        
         <section className="container-grid">
-    
         {businesses.map((business) => (
           <div key={business._id} className="business-card">
-            <h3>Name:{business.name}</h3>
             <img src={business.img} alt={business.name} />
-            <p>Location:{business.location}</p>
-            <p>Category:{business.category}</p>
-    
+            <h3>Name: {business.name}</h3>
+            <p>Location: {business.location}</p>
+            <button>Coupons Available</button>
+
        </div>
         ))}
 

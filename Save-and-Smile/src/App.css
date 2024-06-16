@@ -120,3 +120,44 @@ nav a {
   color: white;
 
 }
+
+ h2 {
+  font-size: 45px;
+  text-align: center;
+  border: 3px black dotted; 
+  display: block;
+  background-color:blue;
+  position: relative;
+  margin-left: 68vh;
+  width: 53vh;
+  padding: 15px;
+  flex-direction: row;
+}
+
+.container-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  color:black;
+  font-weight: bold;
+
+}
+
+.business-card {
+  border: 4px solid #333333ec;
+  box-shadow: 15px 10px 15px #969696;
+  width: 90%;
+  height: 80vh;
+  border-radius: 6px;
+  background-size: cover;
+  background-color: grey;
+  padding: 1.5vh;
+}
+
+img {
+  height: 60vh ;
+  width: 55vh;
+  margin: 5px;
+  margin-top: 10px;
+  border-radius: 12px;
+}
+

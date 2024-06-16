@@ -9,7 +9,6 @@ const Category = () => {
   const handleSubmit = async (category) => {
      let response = await axios.get(`http://localhost:3000/businesses?category=${category}`)
      console.log(response.data);
-
      setBusinesses(response.data)
      navigate(`${category}`)
   }
