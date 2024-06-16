@@ -9,7 +9,7 @@ const Business = () => {
 
     useEffect (() => {
     getBusinesses()
-    }, [])
+    }, [category])
 
    const getBusinesses = async () => {
     try {
@@ -20,21 +20,21 @@ const Business = () => {
         console.error("Error fetching data:", error);
       }
     }
-    
 
     return( 
     <div className="Restaurants">
-        <h2>Restaurants List</h2>
+        <h2>{category} List</h2>
        
         <section className="container-grid">
     
         {businesses.map((business) => (
           <div key={business._id} className="business-card">
-            <Category ><h3>{business.name}</h3>
-            <p><strong>Location:</strong> {business.location}</p>
-            <p><strong>Type:</strong> {business.type}</p>
-            {business.img && <img src={business.img} alt={business.name} />}
-        </Category>  </div>
+            <h3>Name:{business.name}</h3>
+            <img src={business.img} alt={business.name} />
+            <p>Location:{business.location}</p>
+            <p>Category:{business.category}</p>
+    
+       </div>
         ))}
 
         </section>
