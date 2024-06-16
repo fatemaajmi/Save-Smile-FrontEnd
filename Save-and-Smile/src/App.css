@@ -86,10 +86,13 @@ nav a {
   margin-top: -18vh;
   display: flex;
   position: relative;
-  margin-left: 70vh;
-  border: solid rgba(128, 0, 128, 0.842) 4.5px;
+  margin-left: 55vh;
+  border: solid rgba(128, 0, 128, 0.603) 3.5px;
   border-radius: 3px;
-  width: fit-content;
+  background-color: black;
+  font-weight: bold;
+  color: white;
+  font-size: 3vh;
 }
 
 .buttonCss{
@@ -105,4 +108,15 @@ nav a {
   background-color: black;
   width: 100%;
   position: relative;
+}
+
+.cateButton{
+  margin-top: -18vh;
+  position: relative;
+  margin-left: 55vh;
+  border-radius: 3px;
+  background-color: black;
+  font-weight: bold;
+  color: white;
+
 }

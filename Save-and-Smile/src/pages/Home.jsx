@@ -9,9 +9,9 @@ const Home = () => {
 
        </section> 
        
-        <section className="button">
+        <section>
         <Link to={`/categories`}>
-        <button>Click Here To Get Started</button>
+        <button className="button">Click Here To Get Started</button>
         </Link>
          </section>
 
