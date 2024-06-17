@@ -12,7 +12,7 @@ const Coupon = () => {
 
    const getCoupons = async () => {
     try {
-        const response = await axios.get(`http://localhost:3000/coupons/${id}`)
+        const response = await axios.get(`http://localhost:3000/coupons`)
         console.log(response.data);
         setCoupons(response.data)
       } catch (error) {
