@@ -161,3 +161,16 @@ img {
   border-radius: 12px;
 }
 
+.container-container {
+  display: grid;
+  color:white;
+  font-weight: bold;
+}
+
+.Detailcard > img {
+  height: 75vh ;
+  width: 85vh;
+  margin: 5px;
+  margin-top: 10px;
+  border-radius: 12px;
+}

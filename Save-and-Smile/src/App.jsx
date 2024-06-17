@@ -6,6 +6,7 @@ import Category from './pages/Category'
 import Business from './pages/Business'
 import Coupon from './pages/Coupon'
 import './App.css'
+import Detail from './pages/Detail'
 
 const App = () => {
 
@@ -20,6 +21,7 @@ const App = () => {
         <Route path="/categories" element={<Category />} />
         <Route path="/categories/:category" element={<Business />} />
         <Route path="/categories/:category/:id/coupons" element={<Coupon />} />
+        <Route path="/categories/:category/:id/coupons/:id/details" element={<Detail />} />
       </Routes>
     </main>
   </div>

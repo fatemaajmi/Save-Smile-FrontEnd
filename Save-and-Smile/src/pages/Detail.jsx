@@ -2,8 +2,9 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
 import { Link } from 'react-router-dom';
+import Coupon from './Coupon';
 
-const Coupon = () => {
+const Detail = () => {
     const [coupons, setCoupons] = useState([])
     const { id } = useParams()
 
@@ -23,15 +24,15 @@ const Coupon = () => {
 
     return( 
     <div className="Coupons">
-        <h2>Coupons List</h2>
+        <h2>Coupons Details</h2>
        
-        <section className="container-grid">
+        <section className="container-container">
         {coupons.map((coupon) => (
-          <div key={coupon._id} className="business-card">
+          <div key={coupon._id} className="Detailcard">
             <img src={coupon.img} alt={coupon.name} />
             <h3>Name: {coupon.name}</h3>
             <p>discount: {coupon.discount}</p>
-            <Link to={`${coupon._id}/details`} ><button>Coupons Details</button></Link>
+            <p>description: {coupon.description}</p>
 
        </div>
         ))}
@@ -40,4 +41,4 @@ const Coupon = () => {
       </div>
   )
 }
-export default Coupon;
+export default Detail;
