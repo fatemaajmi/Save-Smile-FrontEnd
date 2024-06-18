@@ -111,9 +111,8 @@ nav a {
 }
 
 .cateButton{
-  margin-top: -18vh;
+  margin-top: -15vh;
   position: relative;
-  margin-left: 55vh;
   border-radius: 3px;
   background-color: black;
   font-weight: bold;
@@ -173,4 +172,15 @@ img {
   margin: 5px;
   margin-top: 10px;
   border-radius: 12px;
+}
+
+.CouponForm{
+  display: grid;
+  grid-template-columns: 1fr ;
+  color: white;
+  padding: 3vh;
+  text-align: left;
+  font-size: bold;
+  margin: 3vh;
+
 }

@@ -29,8 +29,8 @@ const Detail = () => {
         <section className="container-container">
         {coupons.map((coupon) => (
           <div key={coupon._id} className="Detailcard">
-            <img src={coupon.img} alt={coupon.name} />
-            <h3>Name: {coupon.name}</h3>
+            <img src={coupon.img} alt={coupon.title} />
+            <h3>Name: {coupon.title}</h3>
             <p>discount: {coupon.discount}</p>
             <p>description: {coupon.description}</p>
             <Link to={`/Review`} ><button>Coupons Purchased</button></Link>
