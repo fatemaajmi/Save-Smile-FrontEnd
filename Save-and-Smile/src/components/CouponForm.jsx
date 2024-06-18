@@ -41,14 +41,14 @@ const CouponForm = () => {
         onChange={handleChange}
         value={form.discount}
       />
-      <label htmlFor="description">description:</label>
+      <label htmlFor="description">Description:</label>
       <input
         id="description"
         type="text"
         onChange={handleChange}
         value={form.description}
       />
-      <label htmlFor="img">image URL:</label>
+      <label htmlFor="img">Image URL:</label>
       <input
         id="img"
         type="text"
