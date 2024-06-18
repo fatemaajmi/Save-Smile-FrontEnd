@@ -33,7 +33,7 @@ const Detail = () => {
             <h3>Name: {coupon.name}</h3>
             <p>discount: {coupon.discount}</p>
             <p>description: {coupon.description}</p>
-
+            <Link to={`/Review`} ><button>Coupons Purchased</button></Link>
        </div>
         ))}
 

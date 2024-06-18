@@ -5,11 +5,11 @@ import { Link } from 'react-router-dom';
 
 const Coupon = () => {
     const [coupons, setCoupons] = useState([])
-    const { id } = useParams()
+    const { businessId } = useParams()
 
     useEffect (() => {
     getCoupons()
-    }, [id])
+    }, [businessId])
 
    const getCoupons = async () => {
     try {

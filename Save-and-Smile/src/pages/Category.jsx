@@ -1,15 +1,9 @@
-import { useState } from "react";
 import { useNavigate } from "react-router-dom"
-import axios from 'axios';
 
 const Category = () => {
-  const [businesses, setBusinesses] = useState([])
   const navigate = useNavigate();
 
   const handleSubmit = async (category) => {
-     let response = await axios.get(`http://localhost:3000/businesses?category=${category}`)
-     console.log(response.data);
-     setBusinesses(response.data)
      navigate(`${category}`)
   }
   
