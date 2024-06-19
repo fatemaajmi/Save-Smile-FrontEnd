@@ -4,12 +4,17 @@ import { useParams } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 
 const Coupon = () => {
+    const [editMode, setEditMode] = useState(false)
+    const [formButtonText, setFormButtonText] = useState("Add New Coupon")
+    const [editCouponId, setEditCouponId] = useState(null)
+
+
     const [coupons, setCoupons] = useState([])
     const { business } = useParams()
     const {id} = useParams()
 
     useEffect (() => {
-    getCoupons()
+      getCoupons()
     }, [business])
 
    const getCoupons = async () => {
@@ -39,12 +44,44 @@ const Coupon = () => {
     const handleSubmit = async (event) => {
       event.preventDefault();
       try {
-      const response = await axios.post('http://localhost:3000/coupons', form); 
+      if(editMode){
+        await axios.put(`http://localhost:3000/coupons/${editCouponId}`, form); }
+      else {
+        await axios.post('http://localhost:3000/coupons', form);
+      }
       setForm(initialState);
+      setEditMode(false)
+      setFormButtonText("Add Coupon")
+      setEditCouponId(null)
       } catch (error) {
       console.error('Error creating coupon:', error);
       }
     };
+
+    const handleEdit = (couponId) => {
+      const Edit = coupons.find(coupon => coupon._id == couponId);
+      setForm({
+        title: Edit.title,
+        discount: Edit.discount,
+        description: Edit.description,
+        img: Edit.img,
+        business: Edit.business,
+      });
+      setEditMode(true)
+      setFormButtonText("Edit Coupon")
+      setEditCouponId(couponId)
+
+    };
+
+    const handleDelete = async (id) => {
+      try {
+        await axios.delete(`http://localhost:3000/coupons/${id}`);
+        getCoupons(); 
+      } catch (error) {
+        console.error('Error deleting coupon:', error);
+      }
+    };
+    
 
     return( 
     <div className="Coupons">
@@ -55,7 +92,7 @@ const Coupon = () => {
         id="title"
         type="text"
         onChange={handleChange}
-        value={form.name}
+        value={form.title}
       />
       <label htmlFor="discount">Discount (%):</label>
       <input
@@ -85,7 +122,7 @@ const Coupon = () => {
        onChange={handleChange}
        value={form.business} />
 
-      <button type="submit">Add New Coupon</button>
+      <button type="submit">{formButtonText}</button>
     </form>
        
         <section className="container-grid">
@@ -95,6 +132,9 @@ const Coupon = () => {
             <h3>Name: {coupon.title}</h3>
             <p>discount: {coupon.discount}</p>
             <Link to={`${coupon._id}/details`} ><button>Coupons Details</button></Link>
+            <button onClick={() => handleEdit(coupon._id)}>Edit</button>
+            <button onClick={() => handleDelete(coupon._id)}>Delete</button>
+
        </div>
         ))}
 

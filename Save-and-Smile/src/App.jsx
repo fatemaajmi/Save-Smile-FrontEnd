@@ -25,7 +25,7 @@ const App = () => {
         <Route path="/categories/:category/:id/coupons" element={<Coupon />} />
         <Route path="/categories/:category/:id/coupons/:id/details" element={<Detail />} />
         <Route path="/categories/:category/:id/coupons/:id/details/:id/Review" element={<Review />} />
-        <Route path="/coupons/couponForm" element={<CouponForm />} />
+        <Route path="/coupons/couponForm/:id" element={<CouponForm />} />
       </Routes>
     </main>
   </div>
