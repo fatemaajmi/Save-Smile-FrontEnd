@@ -8,7 +8,6 @@ import Business from './pages/Business'
 import Coupon from './pages/Coupon'
 import Detail from './pages/Detail'
 import Review from './pages/Review'
-import CouponForm from './components/CouponForm'
 
 const App = () => {
 
@@ -25,7 +24,6 @@ const App = () => {
         <Route path="/categories/:category/:id/coupons" element={<Coupon />} />
         <Route path="/categories/:category/:id/coupons/:id/details" element={<Detail />} />
         <Route path="/categories/:category/:id/coupons/:id/details/:id/Review" element={<Review />} />
-        <Route path="/coupons/couponForm/:id" element={<CouponForm />} />
       </Routes>
     </main>
   </div>
