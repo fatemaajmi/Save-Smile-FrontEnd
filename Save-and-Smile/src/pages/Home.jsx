@@ -1,26 +1,18 @@
-import { Link } from "react-router-dom"
+import { Link } from 'react-router-dom'
 
 const Home = () => {
-
   return (
-    <div className="home-container col">         
-     
-      <section className="welcome-signin">
+    <div className="home-container col">
+      <section className="welcome-signin"></section>
 
-       </section> 
-       
-        <section>
+      <section>
         <Link to={`/categories`}>
-        <button className="button">Click Here To Get Started</button>
+          <button className="button">Click Here To Get Started</button>
         </Link>
-         </section>
+      </section>
 
-         <section className="style">
-
-         </section>
-
-           
-      </div>
+      <section className="style"></section>
+    </div>
   )
 }
 
