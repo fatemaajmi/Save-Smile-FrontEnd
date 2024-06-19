@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
 import { Link } from 'react-router-dom';
-import Coupon from './Coupon';
 
 const Detail = () => {
     const [coupons, setCoupons] = useState([])
@@ -14,7 +13,7 @@ const Detail = () => {
 
    const getCoupons = async () => {
     try {
-        const response = await axios.get(`http://localhost:3000/coupons`)
+        const response = await axios.get(`http://localhost:3000/coupons/${id}`)
         console.log(response.data);
         setCoupons(response.data)
       } catch (error) {
@@ -27,16 +26,13 @@ const Detail = () => {
         <h2>Coupons Details</h2>
        
         <section className="container-container">
-        {coupons.map((coupon) => (
-          <div key={coupon._id} className="Detailcard">
-            <img src={coupon.img} alt={coupon.title} />
-            <h3>Name: {coupon.title}</h3>
-            <p>discount: {coupon.discount}</p>
-            <p>description: {coupon.description}</p>
-            <Link to={`/Review`} ><button>Coupons Purchased</button></Link>
+          <div key={coupons._id} className="Detailcard">
+            <img src={coupons.img} alt={coupons.title} />
+            <h3>Name: {coupons.title}</h3>
+            <p>discount: {coupons.discount}</p>
+            <p>description: {coupons.description}</p>
+            <Link to={`${id}/Review`} ><button>Coupons Purchased</button></Link>
        </div>
-        ))}
-
         </section>
       </div>
   )

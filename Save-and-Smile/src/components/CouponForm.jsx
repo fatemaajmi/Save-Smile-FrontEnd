@@ -1,30 +1,51 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import { useParams } from 'react-router-dom';
+import { useEffect } from 'react';
 
 const CouponForm = () => {
-  const initialState = { 
-    title: "", 
-    discount: 0,  
-    description: "",
-    img: "",
-  }
+  const [coupons, setCoupons] = useState([])
+  const { business } = useParams()
+  const {id} = useParams()
 
-  const [form, setForm] = useState(initialState)
+    useEffect (() => {
+    getCoupons()
+    }, [business])
 
-  const handleChange = (event) => {
-    setForm({ ...form, [event.target.id]: event.target.value });
-  }
-
-  const handleSubmit = async (event) => {
-    event.preventDefault();
+   const getCoupons = async () => {
     try {
-    const response = await axios.post('http://localhost:3000/coupons', form); 
-    setForm(initialState);
-    } catch (error) {
-    console.error('Error creating coupon:', error);
+        const response = await axios.get(`http://localhost:3000/coupons`) // Call on newly created end point
+        console.log(response.data);
+        setCoupons(response.data)
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
     }
-  };
 
+    const initialState = { 
+      title: "", 
+      discount: 0,  
+      description: "",
+      img: "",
+      business: ""
+    }
+  
+    const [form, setForm] = useState(initialState)
+  
+    const handleChange = (event) => {
+      setForm({ ...form, [event.target.id]: event.target.value });
+    }
+  
+    const handleSubmit = async (event) => {
+      event.preventDefault();
+      try {
+      const response = await axios.post('http://localhost:3000/coupons', form); 
+      setForm(initialState);
+      } catch (error) {
+      console.error('Error creating coupon:', error);
+      }
+    };
+ 
   return (
     <form className='CouponForm' onSubmit={handleSubmit}>
       <label htmlFor="title">Coupon Name:</label>
@@ -48,16 +69,23 @@ const CouponForm = () => {
         onChange={handleChange}
         value={form.description}
       />
-      <label htmlFor="img">Image URL:</label>
+       <label htmlFor="img">Image URL:</label>
       <input
         id="img"
         type="text"
         onChange={handleChange}
         value={form.img}
       />
-      <button type="submit">New Coupon</button>
+       <label htmlFor="business">businessId:</label>
+       <input id="business" 
+       name="business" 
+       type="text"
+       onChange={handleChange}
+       value={form.business} />
+
+      <button type="submit">Add New Coupon</button>
     </form>
-  );
+  )
 };
 
 export default CouponForm ;
