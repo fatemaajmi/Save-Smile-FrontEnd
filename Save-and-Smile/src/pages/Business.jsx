@@ -37,6 +37,8 @@ const Business = () => {
         ))}
 
         </section>
+
+      
       </div>
   )
 }

@@ -77,7 +77,7 @@ nav a {
 
 .space {
   display: flex;
-  background-color: aqua;
+  background-color: gold;
   height: 6vh;
   margin-left: 0.25vh;
 }
@@ -186,3 +186,24 @@ img {
   margin: 3vh;
 
 }
+
+.Review-container{
+  width: cover;
+}
+
+.Reviewcard{
+  color: white;
+  display: grid;
+  grid-template-columns:1fr 1fr ;
+  background-color: black;
+  border: solid 3px gold;
+}
+
+.Reviewimg {
+  height:35vh ;
+  width: 35vh;
+  margin: 12px;
+  margin-top: 10px;
+  border-radius: 12px;
+}
+
