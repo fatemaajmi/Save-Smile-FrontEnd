@@ -83,7 +83,7 @@ const Business = () => {
         onChange={handleChange}
         value={form.name}
       />
-      <label htmlFor="location">Discount (%):</label>
+      <label htmlFor="location">Location (%):</label>
       <input
         id="location"
         type="text"
