@@ -49,8 +49,8 @@ const Review = () => {
        
         <section className="Review-container">
           <div key={coupons._id} className="Reviewcard">
-          <img src={coupons.img} alt={coupons.name} />
-            <section><h3>Name: {coupons.name}</h3>
+          <img src={coupons.img} alt={coupons.title} />
+            <section><h3>Name: {coupons.title}</h3>
             <p>discount: {coupons.discount}</p>
             <p>description: {coupons.description}</p></section>
           
