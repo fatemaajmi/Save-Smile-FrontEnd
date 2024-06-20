@@ -6,13 +6,11 @@ import { Link } from 'react-router-dom';
 const Business = () => {
     const [businesses, setBusinesses] = useState([])
     const {category} = useParams()
+    const {id} = useParams()
 
     const [editMode, setEditMode] = useState(false)
     const [formButtonText, setFormButtonText] = useState("Add New Business")
-    const [editCouponId, setEditCouponId] = useState(null)
-
-    const { business } = useParams()
-    const {id} = useParams()
+    const [editBusinessId, setEditBusinessId] = useState(null)
 
     useEffect (() => {
     getBusinesses()
@@ -30,7 +28,8 @@ const Business = () => {
     const initialState = { 
       name: "", 
       location: "",
-      img: ""
+      img: "",
+      category: ""
     }
   
     const [form, setForm] = useState(initialState)
@@ -43,32 +42,40 @@ const Business = () => {
       event.preventDefault();
       try {
       if(editMode){
-        await axios.put(`http://localhost:3000/coupons/${editCouponId}`, form); }
+        await axios.put(`http://localhost:3000/businesses/${editBusinessId}`, form); }
       else {
-        await axios.post('http://localhost:3000/coupons', form);
+        await axios.post('http://localhost:3000/businesses', form);
       }
       setForm(initialState);
       setEditMode(false)
-      setFormButtonText("Add Coupon")
-      setEditCouponId(null)
+      setFormButtonText("Add Business")
+      setEditBusinessId(null)
       } catch (error) {
-      console.error('Error creating coupon:', error);
+      console.error('Error creating business:', error);
       }
     };
 
-    const handleEdit = (couponId) => {
-      const Edit = coupons.find(coupon => coupon._id == couponId);
+    const handleEdit = (businessId) => {
+      const Edit = businesses.find(business => business._id == businessId);
       setForm({
-        title: Edit.title,
-        discount: Edit.discount,
-        description: Edit.description,
+        name: Edit.name,
+        location: Edit.location,
         img: Edit.img,
         business: Edit.business,
       });
       setEditMode(true)
-      setFormButtonText("Edit Coupon")
-      setEditCouponId(couponId)
+      setFormButtonText("Edit Business")
+      setEditBusinessId(businessId)
     }
+
+    const handleDelete = async (id) => {
+      try {
+        await axios.delete(`http://localhost:3000/businesses/${id}`);
+        getBusinesses(); 
+      } catch (error) {
+        console.error('Error deleting business:', error);
+      }
+    };
     
     return( 
 
@@ -90,12 +97,12 @@ const Business = () => {
         onChange={handleChange}
         value={form.location}
       />
-      <label htmlFor="description">Description:</label>
+      <label htmlFor="category">Category:</label>
       <input
-        id="description"
+        id="category"
         type="text"
         onChange={handleChange}
-        value={form.description}
+        value={form.category}
       />
        <label htmlFor="img">Image URL:</label>
       <input
@@ -121,7 +128,8 @@ const Business = () => {
             <h3>Name: {business.name}</h3>
             <p>Location: {business.location}</p>
             <Link to={`/categories/${category}/${business._id}/coupons`} ><button>Coupons Available</button></Link>
-            <button onClick={() => handleDelete(category._id)}>Delete</button>
+            <button onClick={() => handleEdit(business._id)}>Edit</button>
+            <button onClick={() => handleDelete(business._id)}>Delete</button>
 
        </div>
         ))}

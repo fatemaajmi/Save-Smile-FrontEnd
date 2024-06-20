@@ -53,12 +53,13 @@ Nav {
   background-color: rgba(0, 0, 0, 0.63);
   height: 3em;
   font-weight: bold;
-  font-size: 3vh;
+  font-size: 2.5vh;
 }
 
 header{
   display: flex;
   background-color: rgb(177, 166, 166);
+  margin-top: 1.5vh;
 }
 
 nav a {
@@ -76,23 +77,22 @@ nav a {
    
   }
 
-.image {
-  height: 53vh ;
-  width: 96vh;
-}
-
 .image2 {
-    height: 53vh;
-    width: 97vh;
-    margin-left: 50vh;
+    height: 48vh;
+    width: 90vh;
+    margin-left: 55vh;
+    margin-top: 2vh;
 }
 
-.space {
-  display: flex;
-  background-color: gold;
-  height: 6vh;
-  margin-left: 0.25vh;
-  
+.carousel-inner{
+  margin-left: 15vh;
+  margin-top: -7.5vh;
+
+}
+
+.carousel-item {
+  height: 50vh;
+  width: 50vh;
 }
 
 .Button{
@@ -102,17 +102,24 @@ grid-template-columns: 1fr 1fr;
 }
 
 .button {
-  display: flex;
-  position: relative;
-  margin-left: 45vh;
-  border: solid rgba(128, 0, 128, 0.603) 3.5px;
+  margin-left: 75vh;
   border-radius: 3px;
-  background-color: black;
   font-weight: bold;
+  margin-top: 2.5vh;
+  width: 45vh;
+  border: 5em;
+  cursor: pointer;
+  outline: none;
+  font-size: 16px;
+  -webkit-transform: translate(0);
+  transform: translate(0);
+  background-image: linear-gradient(45deg, #4568dc, #b06ab3);
+  padding: 0.7em 2em;
+  border-radius: 1px;
+  box-shadow: 1px 1px 10px rgba(255, 255, 255, 0.438);
+  -webkit-transition: box-shadow 0.25s;
+  transition: box-shadow 0.25s;
   color: white;
-  font-size: 2.5vh;
-  margin-top: 16vh;
- 
 }
 
 .buttonCss{
@@ -122,12 +129,12 @@ grid-template-columns: 1fr 1fr;
 }
 
 .style {
-  height: 30vh;
+  height: 28vh;
   display: flex;
   background-color: rgb(177, 166, 166);
   width: 140vh;
   position: relative;
-  margin-top: 6.5vh;
+  margin-top: 2.5vh;
   margin-left: 28vh;
 
 }

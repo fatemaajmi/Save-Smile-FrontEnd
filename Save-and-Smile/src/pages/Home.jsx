@@ -7,8 +7,12 @@ const Home = () => {
 
       <section className="welcome-signin">
       <img className="image2" src="https://ucarecdn.com/b912f51e-5243-454d-901a-991173daf860/"></img>
-       </section> <section className="style">
-         </section>
+       </section> 
+       <section>
+        
+       </section>
+       <section className="style"> </section>
+         
           <section className="Button">
         <Link to={`/categories`}>
         <button className="button">Click Here To Get Started</button>
