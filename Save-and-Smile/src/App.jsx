@@ -13,7 +13,6 @@ const App = () => {
 
   return (
     <div className="App">
-      <div className='space'></div>
     <Nav />
     <main>
       <Routes>

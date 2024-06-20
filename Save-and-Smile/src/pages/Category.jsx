@@ -18,7 +18,7 @@ const Category = () => {
           <section className="cateButton3">
           <button onClick={() => handleSubmit("shop")}>Shopping Malls<img src ="https://media.architecturaldigest.com/photos/655d0c9272651b6a69b0fa80/16:9/w_2580,c_limit/GettyImages-1316449167.jpg"></img></button>
           </section>
-          <section className="style1"> </section>
+          <section className=""> </section>
         </div>
 
         
