@@ -10,7 +10,6 @@ import Business from './pages/Business'
 import Coupon from './pages/Coupon'
 import Detail from './pages/Detail'
 import Review from './pages/Review'
-import CouponForm from './components/CouponForm'
 import Register from './pages/Register'
 import SignIn from './pages/SignIn'
 
@@ -36,6 +35,7 @@ const App = () => {
 
   return (
     <div className="App">
+    
       <div className="space"></div>
       <Nav user={user} handleLogOut={handleLogOut} />
       <main>
@@ -63,7 +63,7 @@ const App = () => {
       </main>
     </div>
 
-  )
+)
 }
 
 export default App

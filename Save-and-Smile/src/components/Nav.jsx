@@ -4,11 +4,9 @@ const Nav = () => {
   return (
     <header>
       <nav>
-        <NavLink to="/">Home</NavLink>
-        <NavLink to="/about">About</NavLink>
-        <NavLink to="/coupons/couponForm">
-          <button>Add New Coupon</button>
-        </NavLink>
+      <NavLink to="/">Home</NavLink>
+      <NavLink to="/about">About</NavLink>
+
       </nav>
     </header>
   )
