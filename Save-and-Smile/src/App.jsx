@@ -35,7 +35,6 @@ const App = () => {
 
   return (
     <div className="App">
-    
       <div className="space"></div>
       <Nav user={user} handleLogOut={handleLogOut} />
       <main>

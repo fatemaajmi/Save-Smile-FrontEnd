@@ -5,7 +5,7 @@
 }
 
 body {
-  background-color: rgba(0, 0, 0, 0.945);
+  background-color: rgb(90, 99, 107);
 }
 
 .logo {
@@ -58,7 +58,7 @@ Nav {
 
 header{
   display: flex;
-  background-color: black;
+  background-color: rgb(177, 166, 166);
 }
 
 nav a {
@@ -82,8 +82,9 @@ nav a {
 }
 
 .image2 {
-    height: 53vh ;
+    height: 53vh;
     width: 97vh;
+    margin-left: 50vh;
 }
 
 .space {
@@ -109,7 +110,7 @@ grid-template-columns: 1fr 1fr;
   background-color: black;
   font-weight: bold;
   color: white;
-  font-size: 3vh;
+  font-size: 2.5vh;
   margin-top: 16vh;
  
 }
@@ -121,12 +122,14 @@ grid-template-columns: 1fr 1fr;
 }
 
 .style {
-  height: 27.5vh;
+  height: 30vh;
   display: flex;
-  background-color: black;
-  width: 100%;
+  background-color: rgb(177, 166, 166);
+  width: 140vh;
   position: relative;
-  margin-top: 5vh;
+  margin-top: 6.5vh;
+  margin-left: 28vh;
+
 }
 
 .style1 {
@@ -178,9 +181,10 @@ grid-template-columns: 1fr 1fr;
  h2 {
   font-size: 45px;
   text-align: center;
-  border: 3px gold solid; 
+  border: 3px rgb(66, 66, 62) solid;
+  border-radius: 10px; 
   display: block;
-  background-color:black;
+  background-color:rgb(129, 130, 138);
   position: relative;
   margin-left: 68vh;
   width: 53vh;
@@ -198,15 +202,15 @@ grid-template-columns: 1fr 1fr;
 }
 
 .business-card {
-  border: 4px solid gold;
-  box-shadow: 15px 10px 15px black;
+  border: 4px solid rgb(63, 62, 62);
+  box-shadow: 15px 10px 15px rgb(65, 45, 45);
   width: 90%;
   height: 80vh;
   border-radius: 6px;
   background-size: cover;
-  background-color: black;
+  background-color: rgb(177, 166, 166);
   padding: 1.5vh;
-  color: white;
+  color: rgb(80, 76, 76);
 }
 
 img {
@@ -253,15 +257,20 @@ img {
 }
 
 .Review-container{
-  width: cover;
+  width: 130vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 32vh;
 }
 
 .Reviewcard{
   color: white;
   display: grid;
   grid-template-columns:1fr 1fr ;
-  background-color: black;
-  border: solid 3px gold;
+  background-color: rgb(177, 166, 166);
+  color: rgb(80, 76, 76);
+  border: solid 3px rgb(56, 56, 52);
 }
 
 .Reviewimg {
