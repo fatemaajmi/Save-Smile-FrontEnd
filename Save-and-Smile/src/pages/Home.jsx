@@ -24,6 +24,28 @@ const Home = () => {
         </form>
         </section>
 
+        <section className="full">
+    <form>
+      <input type="radio" name="fancy1" autoFocus value="clubs" id="clubs1" className="card" />
+      <input type="radio" name="fancy1" value="hearts" id="hearts1" className="card" />
+      <input type="radio" name="fancy1" value="spades" id="spades1" className="card" />
+      <label htmlFor="clubs1" className="card-label"></label>
+      <label htmlFor="hearts1" className="card-label"></label>
+      <label htmlFor="spades1" className="card-label"></label>
+    </form>
+  </section>
+
+  <section className="full">
+    <form>
+      <input type="radio" name="fancy2" autoFocus value="clubs" id="clubs2" className="card" />
+      <input type="radio" name="fancy2" value="hearts" id="hearts2" className="card" />
+      <input type="radio" name="fancy2" value="spades" id="spades2" className="card" />
+      <label htmlFor="clubs2" className="card-label"></label>
+      <label htmlFor="hearts2" className="card-label"></label>
+      <label htmlFor="spades2" className="card-label"></label>
+    </form>
+  </section>
+
           <section className="Button">
         <Link to={`/categories`}>
         <button className="button">Click Here To Get Started</button>
