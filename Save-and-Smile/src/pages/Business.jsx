@@ -50,6 +50,7 @@ const Business = () => {
       setEditMode(false)
       setFormButtonText("Add Business")
       setEditBusinessId(null)
+      getBusinesses()
       } catch (error) {
       console.error('Error creating business:', error);
       }
