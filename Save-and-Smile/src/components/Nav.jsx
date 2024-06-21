@@ -9,7 +9,9 @@ const Nav = () => {
       <NavLink to="/about">About</NavLink>
       <NavLink to="/signin">Sign In</NavLink>
       </nav>
+      {/* <img className='logo' src=''></img> */}
     </header>
+    
   )
 }
 
