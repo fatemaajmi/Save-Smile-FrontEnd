@@ -32,3 +32,4 @@ This repository contains the frontend codebase for Save and Smile app
 #### future updates:
 
 #### credits:
+CSS Scroll in About Page (https://medium.com/@archielister/make-an-infinitely-scrolling-banner-with-html-and-css-e7918506c496)
