@@ -8,7 +8,8 @@ const Category = () => {
   }
   
     return (
-      <div className="Category-container">         
+      <div className="Category-container">
+           <h2>Business List</h2>         
           <section className="cateButton">
           <button onClick={() => handleSubmit("restaurant")}>Restaurants<img src="https://themeforest.img.customer.envatousercontent.com/files/490833269/screenshots/02_preview.jpg?auto=compress%2Cformat&fit=crop&crop=top&w=590&h=300&s=2e4e63a750692b55b7a2c7063b729f7d"></img></button>
           </section> 

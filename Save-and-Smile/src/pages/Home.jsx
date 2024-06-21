@@ -13,6 +13,17 @@ const Home = () => {
        </section>
        <section className="style"> </section>
          
+        <section className="full">
+        <form>
+          <input className="card" type="radio" name="fancy" autoFocus value="clubs" id="clubs" />
+          <input className="card"type="radio" name="fancy" value="hearts" id="hearts" />
+          <input className="card" type="radio" name="fancy" value="spades" id="spades" />
+          <label htmlFor="clubs" className="card-label"></label>
+          <label htmlFor="hearts" className="card-label"></label>
+          <label htmlFor="spades" className="card-label"></label>
+        </form>
+        </section>
+
           <section className="Button">
         <Link to={`/categories`}>
         <button className="button">Click Here To Get Started</button>

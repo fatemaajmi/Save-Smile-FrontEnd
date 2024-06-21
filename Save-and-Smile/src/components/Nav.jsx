@@ -11,7 +11,9 @@ const Nav = () => {
       <NavLink to="/signup">Sign-Up</NavLink>
 
       </nav>
+      {/* <img className='logo' src=''></img> */}
     </header>
+    
   )
 }
 
