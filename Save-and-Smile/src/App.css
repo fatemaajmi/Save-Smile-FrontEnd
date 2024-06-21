@@ -9,10 +9,13 @@ body {
 }
 
 .logo {
-  height: 6em;
-  padding: 1.5em;
+  height: 3em;
+  margin-top: -0.01vh;
+  width: 15em;
   will-change: filter;
   transition: filter 300ms;
+  margin-left: 159.25vh;
+  position: absolute;
 }
 
 .logo:hover {
@@ -266,8 +269,8 @@ label[for='hearts2'] {
 
 .cateButton {
   position: absolute;
-  background-color: rgb(80, 76, 76);
-  padding: 3vh;
+  background-color: rgba(202, 186, 186, 0.377);
+  padding:3vh ;
   font-weight: bold;
   display: flex;
   height: 45vh;
@@ -277,6 +280,13 @@ label[for='hearts2'] {
   border: 3px rgb(66, 66, 62) solid;
 }
 
+.categoryBu{
+  color: white;
+  font-size: 3vh;
+  font-weight: bold;
+  background-color: rgba(0, 0, 0, 0.63);
+  
+}
 .category {
   height: 35vh;
   width: 50vh;
@@ -285,10 +295,10 @@ label[for='hearts2'] {
   margin-right: -0.15vh;
 }
 
-.cateButton2 {
+.cateButton2{
   position: absolute;
-  background-color: rgb(80, 76, 76);
-  padding: 3vh;
+  background-color: rgba(202, 186, 186, 0.377);
+  padding:3vh ;
   font-weight: bold;
   display: flex;
   height: 45vh;
@@ -301,16 +311,16 @@ label[for='hearts2'] {
 
 .cateButton3 {
   position: absolute;
-  background-color: rgb(80, 76, 76);
-  padding: 3vh;
+  background-color: rgba(202, 186, 186, 0.377);
+  padding:3vh ;
   font-weight: bold;
   display: flex;
   height: 45vh;
   width: 50vh;
   display: grid;
-  grid-template-columns: 1fr;
-  border: 3px rgb(66, 66, 62) solid;
-  margin-left: 139.5vh;
+  grid-template-columns: 1fr ;
+  border: 3px rgb(66, 66, 62) solid;  
+  margin-left: 139.25vh;
 }
 
 h1 {
