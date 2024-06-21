@@ -53,6 +53,7 @@ const Coupon = () => {
       setEditMode(false)
       setFormButtonText("Add Coupon")
       setEditCouponId(null)
+      getCoupons()
       } catch (error) {
       console.error('Error creating coupon:', error);
       }
