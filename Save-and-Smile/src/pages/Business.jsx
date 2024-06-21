@@ -6,7 +6,6 @@ import { Link } from 'react-router-dom';
 const Business = () => {
     const [businesses, setBusinesses] = useState([])
     const {category} = useParams()
-    const {id} = useParams()
 
     const [editMode, setEditMode] = useState(false)
     const [formButtonText, setFormButtonText] = useState("Add New Business")
@@ -62,7 +61,7 @@ const Business = () => {
         name: Edit.name,
         location: Edit.location,
         img: Edit.img,
-        business: Edit.business,
+        category: Edit.category,
       });
       setEditMode(true)
       setFormButtonText("Edit Business")
