@@ -31,9 +31,6 @@ This repository contains the frontend codebase for Save and Smile app
 ### Screenshots:
 
 
-![Uploading F6B539B6-9EC5-4902-BC1F-1F5994BD3C4F.jpeg…]()
-![Uploading 888294A7-4F23-46A6-8EF6-BCCDBA942D61.jpeg…]()
-![Uploading 0E1B3F59-2B73-476E-97F3-309D6856A982.jpeg…]()
 
 
 #### future updates:
