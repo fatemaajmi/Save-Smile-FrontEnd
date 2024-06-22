@@ -28,9 +28,6 @@ This repository contains the frontend codebase for Save and Smile app
 ## Hierarchy Diagram
 
 (https://lucid.app/lucidspark/ff39f373-4922-429a-97d0-c56fb1083131/edit?beaconFlowId=7D199E5D5F6E5D1E&invitationId=inv_ce5f4d53-c1ec-4fae-8a17-b8495d89dfa9&page=0_0#)
-### Screenshots:
-
-
 
 
 #### future updates:
